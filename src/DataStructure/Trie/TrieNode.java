@@ -3,9 +3,6 @@ package DataStructure.Trie;
 import java.util.Map;
 import java.util.HashMap;
 
-// TEST
-// import java.util.Set;
-
 public class TrieNode {
     private Map<Character, TrieNode> children;
 
@@ -16,11 +13,6 @@ public class TrieNode {
     public TrieNode getChild(char key) {
         return this.children.get(key);
     }
-
-    // TEST
-    // public Set<Character> getChildren() {
-    //     return this.children.keySet();
-    // }
 
     public void addChild(char key, TrieNode value) {
         this.children.put(key, value);
