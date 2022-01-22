@@ -28,6 +28,10 @@ public class Vector {
         return this.getX() == other.getX() && this.getY() == other.getY();
     }
 
+    public Vector add(Vector other) {
+        return new Vector(this.getX() + other.getX(), this.getY() + other.getY());
+    }
+
     public void increment(Vector other) {
         this.setX(this.getX() + other.getX());
         this.setY(this.getY() + other.getY());

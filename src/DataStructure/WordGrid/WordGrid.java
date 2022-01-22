@@ -51,6 +51,7 @@ public class WordGrid {
     public void parseTrie(Trie trie) {
         Vector[] arrVector = {new Vector(0, -1), new Vector(1, -1), new Vector(1, 0), new Vector(1, 1), new Vector(0, 1), new Vector(-1, 1), new Vector(-1, 0), new Vector(-1, -1)};
         Vector curPosition, iterVector;
+        WordGridStruct curWordGridStruct, iterWordGridStruct;
         TrieNode p;
         int i, j, wordIndex;
 
@@ -63,42 +64,25 @@ public class WordGrid {
                     p = trie.getRoot();
 
                     while (p != null && this.inGrid(curPosition.getX(), curPosition.getY())) {
-                        if (p.isEndWord()) {
-                            iterVector = new Vector(i, j);
-                            
-                            while (!iterVector.isEqual(curPosition)) {
-                                this.getGrid(iterVector.getX(), iterVector.getY()).setWordIndex(wordIndex);
+                        curWordGridStruct = this.getGrid(curPosition.getX(), curPosition.getY());
+
+                        if (p.getChild(curWordGridStruct.getContent()) != null && p.getChild(curWordGridStruct.getContent()).isEndWord()) {
+                            for (iterVector = new Vector(i, j); !iterVector.isEqual(curPosition.add(vector)); iterVector.increment(vector)) {
+                                iterWordGridStruct = this.getGrid(iterVector.getX(), iterVector.getY());
+                                iterWordGridStruct.setWordIndex(wordIndex);
 
                                 // TEST
-                                System.out.print(this.getGrid(iterVector.getX(), iterVector.getY()).getContent());
-
-                                iterVector.increment(vector);
+                                System.out.print(iterWordGridStruct.getContent());
                             }
+
                             // TEST
                             System.out.println();
 
                             wordIndex++;
                         }
 
-                        p = p.getChild(this.getGrid(curPosition.getX(), curPosition.getY()).getContent());
+                        p = p.getChild(curWordGridStruct.getContent());
                         curPosition.increment(vector);
-                    }
-
-                    if (p != null && p.isEndWord()) { // CEK PADA BAGIAN AKHIR
-                        iterVector = new Vector(i, j);
-                        
-                        while (!iterVector.isEqual(curPosition)) {
-                            this.getGrid(iterVector.getX(), iterVector.getY()).setWordIndex(wordIndex);
-
-                            // TEST
-                            System.out.print(this.getGrid(iterVector.getX(), iterVector.getY()).getContent());
-
-                            iterVector.increment(vector);
-                        }
-                        // TEST
-                        System.out.println();
-
-                        wordIndex++;
                     }
                 }
             }
