@@ -72,11 +72,11 @@ public class WordGrid {
                                 iterWordGridStruct.setWordIndex(wordIndex);
 
                                 // TEST
-                                System.out.print(iterWordGridStruct.getContent());
+                                // System.out.print(iterWordGridStruct.getContent());
                             }
 
                             // TEST
-                            System.out.println();
+                            // System.out.println();
 
                             wordIndex++;
                         }
