@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.HashMap;
 
 // TEST
-import java.util.Set;
+// import java.util.Set;
 
 public class TrieNode {
     private Map<Character, TrieNode> children;
@@ -26,7 +26,7 @@ public class TrieNode {
     }
 
     // TEST
-    public Set<Character> getChildren() {
-        return this.children.keySet();
-    }
+    // public Set<Character> getChildren() {
+    //     return this.children.keySet();
+    // }
 }

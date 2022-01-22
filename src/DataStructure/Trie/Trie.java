@@ -28,22 +28,22 @@ public class Trie {
     }
 
     // TEST
-    private void printTrieNode(TrieNode trieNode) {
-        if (!trieNode.isEndWord()) {
-            for (char key : trieNode.getChildren()) {
-                System.out.print(key);
-                System.out.print("(");
-                printTrieNode(trieNode.getChild(key));
-                System.out.print(")");
-            }
-        } else {
-            System.out.print("");
-        }
-    }
+    // private void printTrieNode(TrieNode trieNode) {
+    //     if (!trieNode.isEndWord()) {
+    //         for (char key : trieNode.getChildren()) {
+    //             System.out.print(key);
+    //             System.out.print("(");
+    //             printTrieNode(trieNode.getChild(key));
+    //             System.out.print(")");
+    //         }
+    //     } else {
+    //         System.out.print("");
+    //     }
+    // }
 
     // TEST
-    public void printTrie() {
-        printTrieNode(this.root);
-        System.out.println();
-    }
+    // public void printTrie() {
+    //     printTrieNode(this.root);
+    //     System.out.println();
+    // }
 }

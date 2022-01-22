@@ -34,7 +34,8 @@ public class FileReader {
             } while (scanner.hasNextLine());
 
         } catch (Exception e) {
-            e.printStackTrace();
+            this.wordGrid = null;
+            this.trie = null;
         }
     }
 
