@@ -21,18 +21,17 @@ public class FileReader {
             this.wordGrid = new WordGrid();
 
             line = scanner.nextLine();
-            while (scanner.hasNextLine() && !line.equals("")) {
+            while (!line.equals("")) {
                 wordGrid.addRow(line.replaceAll(" ", "").toCharArray());
                 line = scanner.nextLine();
             }
 
             this.trie = new Trie();
 
-            line = scanner.nextLine();
-            while (scanner.hasNextLine()) {
-                this.trie.insertWord(line.replaceAll(" ", ""));
+            do {
                 line = scanner.nextLine();
-            }
+                this.trie.insertWord(line.replaceAll(" ", ""));
+            } while (scanner.hasNextLine());
 
         } catch (Exception e) {
             e.printStackTrace();

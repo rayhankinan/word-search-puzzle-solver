@@ -44,8 +44,8 @@ public class WordGrid {
 
         this.grid.add(tempList);
         
-        this.length = tempList.size();
-        this.width++;
+        this.width = tempList.size();
+        this.length++;
     }
 
     public void parseTrie(Trie trie) {
@@ -69,14 +69,36 @@ public class WordGrid {
                             while (!iterVector.isEqual(curPosition)) {
                                 this.getGrid(iterVector.getX(), iterVector.getY()).setWordIndex(wordIndex);
 
+                                // TEST
+                                System.out.print(this.getGrid(iterVector.getX(), iterVector.getY()).getContent());
+
                                 iterVector.increment(vector);
                             }
+                            // TEST
+                            System.out.println();
 
                             wordIndex++;
                         }
 
                         p = p.getChild(this.getGrid(curPosition.getX(), curPosition.getY()).getContent());
                         curPosition.increment(vector);
+                    }
+
+                    if (p != null && p.isEndWord()) { // CEK PADA BAGIAN AKHIR
+                        iterVector = new Vector(i, j);
+                        
+                        while (!iterVector.isEqual(curPosition)) {
+                            this.getGrid(iterVector.getX(), iterVector.getY()).setWordIndex(wordIndex);
+
+                            // TEST
+                            System.out.print(this.getGrid(iterVector.getX(), iterVector.getY()).getContent());
+
+                            iterVector.increment(vector);
+                        }
+                        // TEST
+                        System.out.println();
+
+                        wordIndex++;
                     }
                 }
             }
