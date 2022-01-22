@@ -1,16 +1,18 @@
 package DataStructure.WordGrid;
 
+import java.util.List;
+import java.util.ArrayList;
 import DataStructure.Trie.Trie;
 import DataStructure.Trie.TrieNode;
 
 public class WordGrid {
     private int length, width;
-    private WordGridStruct[][] grid;
+    private List<List<WordGridStruct>> grid;
 
-    public WordGrid(int length, int width) {
-        this.length = length;
-        this.width = width;
-        this.grid = new WordGridStruct[length][width];
+    public WordGrid() {
+        this.length = 0;
+        this.width = 0;
+        this.grid = new ArrayList<List<WordGridStruct>>();
     }
 
     public int getLength() {
@@ -22,15 +24,28 @@ public class WordGrid {
     }
 
     public WordGridStruct getGrid(int i, int j) {
-        return grid[i][j];
+        return grid.get(i).get(j);
     }
 
     public void setGrid(int i, int j, WordGridStruct struct) {
-        grid[i][j] = struct;
+        grid.get(i).set(j, struct);
     }
 
     public boolean inGrid(int i, int j) {
         return i >= 0 && i < this.getLength() && j >= 0 && j < this.getWidth();
+    }
+
+    public void addRow(char[] row) {
+        List<WordGridStruct> tempList = new ArrayList<WordGridStruct>();
+
+        for (char c : row) {
+            tempList.add(new WordGridStruct(c));
+        }
+
+        this.grid.add(tempList);
+        
+        this.length = tempList.size();
+        this.width++;
     }
 
     public void parseTrie(Trie trie) {

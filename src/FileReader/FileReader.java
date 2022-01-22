@@ -4,7 +4,6 @@ import java.util.Scanner;
 import java.io.File;
 import DataStructure.Trie.Trie;
 import DataStructure.WordGrid.WordGrid;
-import DataStructure.WordGrid.WordGridStruct;
 
 public class FileReader {
     private File file;
@@ -13,35 +12,26 @@ public class FileReader {
     private WordGrid wordGrid;
 
     public FileReader(String filename) {
-        int length, width, i, j, N;
         String line;
-        String[] data;
 
         try {
             file = new File("test/" + filename);
             scanner = new Scanner(file);
 
-            data = scanner.nextLine().split(" ");
-            length = Integer.parseInt(data[0]);
-            width = Integer.parseInt(data[1]);
-
-            this.wordGrid = new WordGrid(length, width);
-
-            for (i = 0; i < length; i++) {
-                data = scanner.nextLine().split(" ");
-                for (j = 0; j < width; j++) {
-                    wordGrid.setGrid(i, j, new WordGridStruct(data[j].charAt(0)));
-                }
-            }
+            this.wordGrid = new WordGrid();
 
             line = scanner.nextLine();
-            N = Integer.parseInt(line);
+            while (scanner.hasNextLine() && !line.equals("")) {
+                wordGrid.addRow(line.replaceAll(" ", "").toCharArray());
+                line = scanner.nextLine();
+            }
 
             this.trie = new Trie();
 
-            for (i = 0; i < N; i++) {
-                line = scanner.nextLine().replaceAll(" ", "");
-                this.trie.insertWord(line);
+            line = scanner.nextLine();
+            while (scanner.hasNextLine()) {
+                this.trie.insertWord(line.replaceAll(" ", ""));
+                line = scanner.nextLine();
             }
 
         } catch (Exception e) {
