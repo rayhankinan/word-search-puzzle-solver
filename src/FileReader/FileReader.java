@@ -2,6 +2,7 @@ package FileReader;
 
 import java.util.Scanner;
 import java.io.File;
+
 import DataStructure.Trie.Trie;
 import DataStructure.WordGrid.WordGrid;
 

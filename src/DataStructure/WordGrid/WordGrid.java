@@ -2,6 +2,7 @@ package DataStructure.WordGrid;
 
 import java.util.List;
 import java.util.ArrayList;
+
 import DataStructure.Trie.Trie;
 import DataStructure.Trie.TrieNode;
 
@@ -76,7 +77,6 @@ public class WordGrid {
                                 iterWordGridStruct = this.getGrid(iterVector.getX(), iterVector.getY());
                                 iterWordGridStruct.setWordIndex(wordIndex);
                             }
-
                             
                             wordIndex++;
                         }

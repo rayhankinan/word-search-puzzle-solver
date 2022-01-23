@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 import DataStructure.Trie.Trie;
 import DataStructure.WordGrid.WordGrid;
 import FileReader.FileReader;
@@ -26,8 +29,10 @@ public class App {
             ConsoleWriter consoleWriter = new ConsoleWriter(wordGrid);
             consoleWriter.write();
 
+            BigDecimal bigDecimal = new BigDecimal(executionTime).setScale(3, RoundingMode.HALF_EVEN);
+
             System.out.println();
-            System.out.println("Waktu eksekusi: " + executionTime + " milidetik");
+            System.out.println("Waktu eksekusi: " + bigDecimal.doubleValue() + " milidetik");
 
             System.out.println();
             System.out.println("Jumlah operasi perbandingan: " + wordGrid.getNumOperation());
