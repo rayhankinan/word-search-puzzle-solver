@@ -6,12 +6,13 @@ import DataStructure.Trie.Trie;
 import DataStructure.Trie.TrieNode;
 
 public class WordGrid {
-    private int length, width;
+    private int length, width, numOperation;
     private List<List<WordGridStruct>> grid;
 
     public WordGrid() {
         this.length = 0;
         this.width = 0;
+        this.numOperation = 0;
         this.grid = new ArrayList<List<WordGridStruct>>();
     }
 
@@ -21,6 +22,10 @@ public class WordGrid {
 
     public int getWidth() {
         return this.width;
+    }
+
+    public int getNumOperation() {
+        return this.numOperation;
     }
 
     public WordGridStruct getGrid(int i, int j) {
@@ -81,6 +86,7 @@ public class WordGrid {
                             wordIndex++;
                         }
 
+                        this.numOperation++;
                         p = p.getChild(curWordGridStruct.getContent());
                         curPosition.increment(vector);
                     }

@@ -29,6 +29,9 @@ public class App {
             System.out.println();
             System.out.println("Waktu eksekusi: " + executionTime + " milidetik");
 
+            System.out.println();
+            System.out.println("Jumlah operasi perbandingan: " + wordGrid.getNumOperation());
+
             // TEST
             // System.out.println();
             // for (int i = 0; i < wordGrid.getLength(); i++) {
