@@ -32,19 +32,6 @@ public class App {
             System.out.println();
             System.out.println("Jumlah operasi perbandingan: " + wordGrid.getNumOperation());
 
-            // TEST
-            // System.out.println();
-            // for (int i = 0; i < wordGrid.getLength(); i++) {
-            //     for (int j = 0; j < wordGrid.getWidth(); j++) {
-            //         System.out.print(wordGrid.getGrid(i, j).getWordIndex() + " ");
-            //     }
-            //     System.out.println();
-            // }
-
-            // TEST
-            // System.out.println();
-            // trie.printTrie();
-
             scanner.close();
             
         } else {

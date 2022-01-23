@@ -75,14 +75,9 @@ public class WordGrid {
                             for (iterVector = new Vector(i, j); !iterVector.isEqual(curPosition.add(vector)); iterVector.increment(vector)) {
                                 iterWordGridStruct = this.getGrid(iterVector.getX(), iterVector.getY());
                                 iterWordGridStruct.setWordIndex(wordIndex);
-
-                                // TEST
-                                // System.out.print(iterWordGridStruct.getContent());
                             }
 
-                            // TEST
-                            // System.out.println();
-
+                            
                             wordIndex++;
                         }
 
