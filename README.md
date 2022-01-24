@@ -1,5 +1,5 @@
 # Word Search Puzzle Solver
-Disusun untuk mendukung Tugas Kecil 1 IF2211 Strategi Algoritma "Penyelesaian *Word Search Puzzle* dengan Algoritma *Brute Force*"
+Disusun untuk memenuhi Tugas Kecil 1 IF2211 Strategi Algoritma "Penyelesaian *Word Search Puzzle* dengan Algoritma *Brute Force*".
 
 ## Daftar Isi
 * [Deskripsi Singkat Program](#deskripsi-singkat-program)
@@ -16,14 +16,17 @@ Program untuk mencari semua solusi kata pada *word search puzzle* dengan menggun
 ```bash
 .
 │   .gitignore
+│   Makefile
 │   README.md
+│   run.bat
+│   run.sh
 │
 ├───src
 │   │   App.java
 │   │
 │   ├───ConsoleWriter
 │   │       ConsoleWriter.java
-│   │       
+│   │
 │   ├───DataStructure
 │   │   ├───Trie
 │   │   │       Trie.java
@@ -50,7 +53,7 @@ Program untuk mencari semua solusi kata pada *word search puzzle* dengan menggun
 ```
 
 ## Requirement Program
-* Java Virtual Machine versi 11 atau lebih baru
+* Java Virtual Machine versi 11 atau lebih baru.
 
 ## Cara Kompilasi Program
 1. Pastikan Java Virtual Machine versi 11 atau lebih baru sudah terpasang pada mesin eksekusi (Anda dapat mengecek versi Java Virtual Machine dengan menjalan command `java -version` pada command prompt).
