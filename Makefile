@@ -1,7 +1,6 @@
 SOURCE=src
 TARGET=bin
 COMPILER=javac
-RUNNER=java
 PROGRAM=App
 
 all:

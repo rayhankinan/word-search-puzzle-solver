@@ -1,2 +1,6 @@
 @echo off
-java -classpath bin App
+set RUNNER=java
+set TARGET=bin
+set PROGRAM=App
+
+%RUNNER% -classpath %TARGET% %PROGRAM%
