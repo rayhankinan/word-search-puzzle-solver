@@ -10,6 +10,7 @@ Disusun untuk mendukung Tugas Kecil 1 IF2211 Strategi Algoritma "Penyelesaian *W
 * [Author](#author)
 
 ## Deskripsi Singkat Program
+Program untuk mencari semua solusi kata pada *word search puzzle* dengan menggunakan algoritma *brute force* serta ADT Matriks dan ADT Trie. Program menerima masukan dalam bentuk file teks dalam format `.txt` yang berisi grid karakter serta kumpulan kata yang hendak dicari (dipisahkan dengan baris kosong). Kemudian, program akan mengeluarkan hasil pencarian tersebut dalam bentuk command prompt dengan kata yang ditemukan akan diberi warna. Program dibangun dengan menggunakan bahasa Java.
 
 ## Struktur Program
 ```bash
