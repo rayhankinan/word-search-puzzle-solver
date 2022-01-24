@@ -53,7 +53,18 @@ Disusun untuk mendukung Tugas Kecil 1 IF2211 Strategi Algoritma "Penyelesaian *W
 
 ## Cara Kompilasi Program
 1. Pastikan Java Virtual Machine versi 11 atau lebih baru sudah terpasang pada mesin eksekusi (Anda dapat mengecek versi Java Virtual Machine dengan menjalan command `java -version` pada command prompt).
+2. Jalankan command `make all` pada command prompt untuk melakukan kompilasi pada program.
+3. Jika berhasil dikompilasi, maka akan terdapat folder `bin` pada directory program.
 
 ## Cara Menjalankan Program
+1. Pastikan Anda telah berhasil melakukan kompilasi pada program.
+2. Tambahkan file teks dalam format `.txt` yang berisi matriks huruf di dalam *puzzle* (antarhuruf dipisahkan oleh spasi), diikuti satu baris kosong, dan daftar kata-kata yang akan dicari di dalam *puzzle* ke dalam folder `test` pada directory program.
+3. Jalankan command `./run` atau `./run.bat` pada command prompt jika Anda menggunakan Windows dan jalankan command `./run.sh` pada command prompt jika Anda menggunakan Linux atau macOS.
+4. Masukkan nama file teks yang sudah ditambahkan sebelumnya ke dalam input program.
+5. Jika sudah selesai, Anda dapat membersihkan kompilasi program dengan menjalankan command `make clean` pada command prompt. Anda harus mengkompilasi ulang bila menjalankan command ini.
 
 ## Author
+* Nama: Rayhan Kinan Muhannad
+* NIM: 13520065
+* Jurusan: Teknik Informatika
+* Profile Github: [rayhankinan](https://github.com/rayhankinan)
