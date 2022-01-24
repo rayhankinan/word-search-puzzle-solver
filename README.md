@@ -52,6 +52,7 @@ Disusun untuk mendukung Tugas Kecil 1 IF2211 Strategi Algoritma "Penyelesaian *W
 * Java Virtual Machine versi 11 atau lebih baru
 
 ## Cara Kompilasi Program
+1. Pastikan Java Virtual Machine versi 11 atau lebih baru sudah terpasang pada mesin eksekusi (Anda dapat mengecek versi Java Virtual Machine dengan menjalan command `java -version` pada command prompt).
 
 ## Cara Menjalankan Program
 
