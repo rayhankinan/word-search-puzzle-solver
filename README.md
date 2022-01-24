@@ -66,5 +66,5 @@ Disusun untuk mendukung Tugas Kecil 1 IF2211 Strategi Algoritma "Penyelesaian *W
 ## Author
 * Nama: Rayhan Kinan Muhannad
 * NIM: 13520065
-* Jurusan: Teknik Informatika
+* Prodi/Jurusan: STEI/Teknik Informatika
 * Profile Github: [rayhankinan](https://github.com/rayhankinan)
