@@ -16,13 +16,35 @@ Disusun untuk mendukung Tugas Kecil 1 IF2211 Strategi Algoritma "Penyelesaian *W
 .
 │   .gitignore
 │   README.md
+│   
+├───.vscode
+│       settings.json
+│       
+├───bin
+│   │   App.class
+│   │   
+│   ├───ConsoleWriter
+│   │       ConsoleWriter.class
+│   │
+│   ├───DataStructure
+│   │   ├───Trie
+│   │   │       Trie.class
+│   │   │       TrieNode.class
+│   │   │
+│   │   └───WordGrid
+│   │           Vector.class
+│   │           WordGrid.class
+│   │           WordGridStruct.class
+│   │
+│   └───FileReader
+│           FileReader.class
 │
 ├───src
 │   │   App.java
 │   │
 │   ├───ConsoleWriter
 │   │       ConsoleWriter.java
-│   │
+│   │       
 │   ├───DataStructure
 │   │   ├───Trie
 │   │   │       Trie.java
