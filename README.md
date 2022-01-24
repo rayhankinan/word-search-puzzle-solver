@@ -12,6 +12,41 @@ Disusun untuk mendukung Tugas Kecil 1 IF2211 Strategi Algoritma "Penyelesaian *W
 ## Deskripsi Singkat Program
 
 ## Struktur Program
+```bash
+.
+│   .gitignore
+│   README.md
+│
+├───src
+│   │   App.java
+│   │
+│   ├───ConsoleWriter
+│   │       ConsoleWriter.java
+│   │
+│   ├───DataStructure
+│   │   ├───Trie
+│   │   │       Trie.java
+│   │   │       TrieNode.java
+│   │   │
+│   │   └───WordGrid
+│   │           Vector.java
+│   │           WordGrid.java
+│   │           WordGridStruct.java
+│   │
+│   └───FileReader
+│           FileReader.java
+│
+└───test
+        large_1.txt
+        large_2.txt
+        large_3.txt
+        medium_1.txt
+        medium_2.txt
+        medium_3.txt
+        small_1.txt
+        small_2.txt
+        small_3.txt
+```
 
 ## Requirement Program
 
