@@ -14,7 +14,7 @@ Program untuk mencari semua solusi kata pada *word search puzzle* dengan menggun
 
 ## Struktur Program
 ```bash
-C:.
+.
 │   .gitignore
 │   extract.bat
 │   extract.sh
